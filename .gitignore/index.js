@@ -181,3 +181,4 @@ bot.on('message', message =>{
        console.log("» Commande MAJ Activé");
     }
 });
+        client.login(process.env.TOKEN);
