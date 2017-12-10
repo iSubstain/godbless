@@ -1,0 +1,16 @@
+{
+  "name": "dankbot",
+  "version": "1.0.0",
+  "description": "GodBless Shield 0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iSubstain",
+  "license": "ISC"
+}
