@@ -172,7 +172,7 @@ bot.on('message', message =>{
        .setColor("#046380")
        .setThumbnail("https://cdn.discordapp.com/attachments/350760367439347722/388392505789382667/upload-icon.png")
        .addField(" **»** Mise à Jour GodBless Shield 🔰 disponible",  "\n▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔")
-       .addField("**›** Depuis le", "\n08/12/2017")
+       .addField("**›** Depuis le", "\n11/12/2017")
        .addField("» Nouveautés", "**›** GodBless Shield🔰 ajouté au serveur Discord, il est aussi désormais hébergé sur un VPS \n**›** Ajout de la commande **!help** \n**›** Ajout de la commande **!meme** \n**›** Amélioration de la commande **!media** \n**›** Amélioration de la commande **!afk**")
        .addField("» Patchnote : **Not Added For This Version.**","▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔")
        .setFooter("GodBless Shield        © 2017", "https://media.discordapp.net/attachments/332911890453889035/388407776398802944/SERENA.png?width=280&height=497")
