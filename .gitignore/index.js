@@ -11,7 +11,7 @@ db.defaults({ histoires: [], xp: []}).write()
 var bot = new Discord.Client();
 var prefix = ("!");
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: '!help GS 1.0', type: 0}});
+    bot.user.setPresence({ game: { name: '!help GS 1.2', type: 0}});
     console.log("» Bot Activé !");
 })
 
@@ -91,14 +91,26 @@ bot.on('message', message =>{
        .setColor("#046380")
        .setThumbnail("https://media.discordapp.net/attachments/332911890453889035/399076048601481216/895-512.png")
        .addField(" **»** Maintenance Système GodBless Shield 🔰",  "\n▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔")
-       .addField("**›** Depuis le   ", "\n06/01/2018") 
-       .addField("» **Maintenance Du GodBless Shield**", "\n**›** Le bot GS sera en maintenance pour une upgrade de code. (Le bot sera de retour dimanche au plus tard)")
+       .addField("**›** Depuis le   ", "\n07/02/2018") 
+       .addField("» **Maintenance Du GodBless Shield**", "\n**›** Mise à jour du bot.")
        .addField("» Patchnote : **Not Added For This Version.**", "▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔")
        .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/332911890453889035/388407776398802944/SERENA.png?width=280&height=497")
        .setTimestamp()
        message.channel.sendEmbed(reload_embed);
        console.log("» Commande Admin Activé");
-
+    }
+    if (message.content === "$hbday"){
+       var reload_embed = new Discord.RichEmbed()
+       .setColor("#046380")
+       //.setThumbnail("https://www.youtube.com/watch?v=5dQxVn2eFjk&list=PLz81v5j1VQCWBCPPioX2_28mSqPtWgbu5")
+       .addField(" **»** Anniversaire du Serveur AzurII ☬ :tada:  ",  "\n▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔")
+       .addField("Aujourd'hui, ça fait 2ans que le serveur AzurII a été lancé **(20/02/2016)**", "\n \n Et Honnêtement, c'était un serveur certe pas ouf mais en terme de fun c'était je pense le best 4me bien plus que Nerilia, OMG etc (Surtout la s1 de AzurII n_n) \n La découverte, on fait n'imp etc c'était COOL")
+       .addField("AzurII n'exsite plus, mais il laisse derrière lui 2 ans de fun ;P ainsi que 2 serveurs qui lui succéde **GodBless Vanilla** & **GwP AKA AzurII Summer Pack Revamp**")
+       .addField("**›** AzurII S1 : **20 Février 2016** \n **›** AzurII S2 : **13 Juillet 2016** \n **›** AzurII v2.5 **20 Février 2017**")
+       .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/332911890453889035/388407776398802944/SERENA.png?width=280&height=497")
+       .setTimestamp()
+       message.channel.sendEmbed(reload_embed);
+       console.log("» Commande MAJ Activé");
     
         // »Commandes Non Admin//
         
@@ -111,6 +123,7 @@ bot.on('message', message =>{
             .addField("» Commandes Liens", " **!teams** : *Affiche le site de la GodBless* \n**!media** : *Affiche les media de la GodBless*")
             .addField("» Commandes Utiles", "**!afk** : *Permet de te mettre AFK sur le serveur Discord*")
             .addField("» Commandes Memes", "**!rekt, !pepe, !halp** : *Affiche les memes disponible* \n**NOTE :** `Les Commandes Memes sont temporairement Disable sauf !halp`")
+            .addField("» Commandes GodBless", "**!ip** : *Permet d'afficher les IP des serveurs GodBless*")
             .setFooter("GodBless Shield        © 2018", "https://cdn.discordapp.com/attachments/332911890453889035/383686173869998082/3dDoge.gif")
             .setThumbnail("https://media.discordapp.net/attachments/264967015553302529/383714716771549184/PC-Optimizer-System-Mechanic.png")
             message.channel.sendEmbed(reload_embed);
@@ -120,23 +133,38 @@ bot.on('message', message =>{
     if (message.content === prefix + "leaderboard"){
         var reload_embed = new Discord.RichEmbed()
             .setColor('#0080FF')
-            .addField("Expérience Leaderboard **(1.0)**", "**›**  Leaderboard du serveur **☬ GodBless Family ✨ [BETA]** \n :arrow_right_hook: **https://mee6.xyz/levels/140226294435676161**")
-        .setFooter("GodBless Shield         © 2018", "https://cdn.discordapp.com/attachments/332911890453889035/383686173869998082/3dDoge.gif")
+            .addField("Expérience Leaderboard **(1.0)**", "**›**  Leaderboard du serveur **☬ GodBless Family ✨** \n :arrow_right_hook: **https://mee6.xyz/levels/140226294435676161**")
+        .setFooter("GodBless Shield         © 2018", "https://media.discordapp.net/attachments/383036516328538125/412032781686931471/384.gif")
+        //.setThumbnail("https://media.discordapp.net/attachments/383036516328538125/412032781686931471/384.gif")
         message.channel.sendEmbed(reload_embed);
         console.log("» Commande Leaderboard Activé");
+    }
+        if (message.content === prefix + "teams"){
+            let SSRole = message.guild.roles.find("name", "🛡GodBless");
+            if(message.member.roles.has(SSRole.id)) {
+            var reload_embed = new Discord.RichEmbed()
+                .setColor('#4e31ba')
+                .addField("Site GodBless [ALPHA]", "**›**  Guilde du serveur **☬ GodBless Family ✨** \n :arrow_right_hook: **https://www.guilded.gg/teams/WR0p8ZRY**")
+            .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/332911890453889035/383731054483210244/fb_logo.png?width=496&height=496")
+            .setThumbnail("https://media.discordapp.net/attachments/383036516328538125/412274903421812757/discordpic3.0.jpg?width=908&height=511")
+            //.setThumbnail("https://media.discordapp.net/attachments/332911890453889035/383685176330551297/venezuela_flag_bandera_by_paundpro-d5qb8k4.jpg?width=767&height=496")
+            message.channel.sendEmbed(reload_embed);
+            console.log("» Commande Teams Activé");
+            } else {
+            message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
+                }
 
      }
-    if (message.content === prefix + "teams"){
+     if (message.content === prefix + "ip"){
         let SSRole = message.guild.roles.find("name", "🛡GodBless");
         if(message.member.roles.has(SSRole.id)) {
         var reload_embed = new Discord.RichEmbed()
-            .setColor('#4e31ba')
-            .addField("Site GodBless [ALPHA]", "**›**  Guilde du serveur **☬ GodBless Family ✨ [BETA]** \n :arrow_right_hook: **https://www.guilded.gg/teams/WR0p8ZRY**")
-        .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/332911890453889035/383731054483210244/fb_logo.png?width=496&height=496")
-        .setThumbnail("https://media.discordapp.net/attachments/332911890453889035/383685176330551297/venezuela_flag_bandera_by_paundpro-d5qb8k4.jpg?width=767&height=496")
+        .setColor('#4e31ba')
+        .addField("GodBless Servers **(1.0)**", "**›**  IP des servers **☬ GodBless Family ✨** \n :arrow_right_hook: *dreamyvanillags.omgcraft.fr* **(Vanilla Server)** ***[WHITELIST]*** \n \n :arrow_right_hook: *dreamymoddedgwp.uhcserv.eu* **(Modded Server)** ***[PRIVATE]***")
+        .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/383036516328538125/412027401732620289/grass_block_by_barakaldo-d58bi3u.gif")
         message.channel.sendEmbed(reload_embed);
-        console.log("» Commande Teams Activé");
-        } else {
+        console.log("» Commande IP Activé");
+    } else {
         message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
             }
 
@@ -144,18 +172,18 @@ bot.on('message', message =>{
      if (message.content === prefix + "media"){
         var reload_embed = new Discord.RichEmbed()
         .setColor('#c4302b')
-        .addField("GodBless Media", "**›** Chaîne Youtube de **iSubstain** \n :arrow_right_hook: **https://www.youtube.com/channel/UCxIR_2LmsKchVYjugbXrDqg**")
+        .addField("GodBless Media", "**›** Chaîne Youtube de **iSubstain** \n :arrow_right_hook: **https://www.youtube.com/c/iSubstain**")
         .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/384491991372922891/399390886577963028/Youtube_IS_GHey.gif")
         .setThumbnail("https://media.discordapp.net/attachments/384491991372922891/399391159228694542/Android-Apps_Google_YouTube-Gaming_Screenshots_082615_15.png")
         message.channel.sendEmbed(reload_embed);
-        console.log("» Commande Teams Activé");
+        console.log("» Commande Media Activé");
 
      }
      if (message.content === prefix + "afk"){
         var reload_embed = new Discord.RichEmbed()
         .setColor("#046380")
         .addField("  » AFK System [BETA]", "**Cette personne est désormais AFK 💤** \n       _(Spam le pour le réveiller)_ ")
-        .setFooter("GodBless Shield        © 2018", "https://cdn.discordapp.com/attachments/332911890453889035/383686173869998082/3dDoge.gif")
+        .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/383036516328538125/412035466670374912/shutdown-button-clipart-animated-gif-1.gif?width=511&height=511")
         .setImage("")
         .setTimestamp()
         .setAuthor(message.author.username, message.author.avatarURL)
@@ -170,12 +198,10 @@ bot.on('message', message =>{
         .setFooter("GodBless Shield         © 2018", "https://media.discordapp.net/attachments/384491991372922891/399412753460101121/giphy_1.gif")
         message.channel.sendEmbed(reload_embed);
         console.log("» Commande PusheenCat Activé");
-    
-         
-
-        // »Commandes memes//
-
     }
+
+
+    
     if (message.content === prefix + "halp"){
        var reload_embed = new Discord.RichEmbed()
            .setColor('#046380')
@@ -207,6 +233,5 @@ bot.on('message', message =>{
         } else {
           message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
         }
-
     }
 });
