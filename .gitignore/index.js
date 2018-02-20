@@ -15,9 +15,9 @@ bot.on('ready', () => {
     console.log("» Bot Activé !");
 })
 
-bot.login('MzgzMjI5OTIwMTg2MzM1MjMy.DPhR6Q.GbpCIC3Qv031dCma3my0nKrstTM');
+bot.login('NDE1NjI0NDY4NjM1ODQ0NjA4.DW4n_Q.rsbLFiHZSevVrVybzUKLEyC1Uzo');
 
-bot.on('message', message =>{
+bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
 
     var msgauthor = message.author.id;
 
