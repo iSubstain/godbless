@@ -27,7 +27,7 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
         db.get("xp").push({user: msgauthor, xp: 1}).write();
     }else{
     
-    // CMD Admin
+        // CMD Admin
 
     }
 
@@ -114,6 +114,7 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
         var reload_embed = new Discord.RichEmbed()
             .setColor('#00e9ff')
             .addField(" » Commandes Help", "  **!help** : *Pour la liste des commandes disponible*")
+            .addField(" » Commandes Média", "  **!ytb** : *Pour afficher la chaîne de SofZilog*")
             //.addField(" » Commandes Exp", "  **!rank** : *Pour voir son level* \n**!leaderboard** : *Pour voir le leaderboard*")
             .addField("» Commandes Utiles", "**!afk** : *Permet de te mettre AFK sur le serveur Discord*")
             .addField("» Commandes Memes", "**!rekt, !pepe, !halp** : *Affiche les memes disponible* \n**NOTE :** `Les Commandes Memes sont temporairement Disable sauf !halp`")
@@ -149,14 +150,25 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
 
 
      }
-     if (message.content === prefix + "media"){
+     if (message.content === prefix + "God"){
         var reload_embed = new Discord.RichEmbed()
         .setColor('#c4302b')
-        .addField("GodBless Media", "**›** Chaîne Youtube de **iSubstain** \n :arrow_right_hook: **https://www.youtube.com/c/iSubstain**")
+        .addField("GodBless secrets", "**›** Chaîne Youtube de **iSubstain** \n :arrow_right_hook: **https://www.youtube.com/c/iSubstain**")
         .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/384491991372922891/399390886577963028/Youtube_IS_GHey.gif")
         .setThumbnail("https://media.discordapp.net/attachments/384491991372922891/399391159228694542/Android-Apps_Google_YouTube-Gaming_Screenshots_082615_15.png")
         message.channel.sendEmbed(reload_embed);
-        console.log("» Commande Media Activé");
+        console.log("» Commande God Activé");
+
+     }
+     if (message.content === prefix + "ytb"){
+        var reload_embed = new Discord.RichEmbed()
+        .setColor('#c4302b')
+        .addField("Chaîne youtube", "**›** Chaîne Youtube de **SofZilog** \n :arrow_right_hook: **https://www.youtube.com/channel/UCGYQHkdzB838TdLvmjf1NlQ**")
+        .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/384491991372922891/399390886577963028/Youtube_IS_GHey.gif")
+        .setThumbnail("https://media.discordapp.net/attachments/384491991372922891/399391159228694542/Android-Apps_Google_YouTube-Gaming_Screenshots_082615_15.png")
+        message.channel.sendEmbed(reload_embed);
+        console.log("» Commande ytb media Activé");
+
 
      }
      if (message.content === prefix + "afk"){
