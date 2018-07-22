@@ -38,7 +38,7 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
             .setColor('#BD0A0A')
             .addField("Mise à jour Bot  [BETA]", "     **Downloading new packages...**")
             .setFooter("GodBless Shield       © 2018", "https://media.discordapp.net/attachments/332911890453889035/388373012589838338/termianl-icon3.png")
-            .setThumbnail("https://cdn.discordapp.com/attachments/384491991372922891/470727280159752203/finish.png")
+            .setThumbnail("https://media.discordapp.net/attachments/332911890453889035/388372168724971521/662373_edit_512x512.png")
         message.channel.sendEmbed(dev_embed);
         console.log("» Commande Developper Activé");
         } else {
