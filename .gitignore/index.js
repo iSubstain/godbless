@@ -15,7 +15,7 @@ bot.on('ready', () => {
     console.log("» Bot Activé !");
 })
 
-bot.login('NDE1NjI0NDY4NjM1ODQ0NjA4.DW4n_Q.rsbLFiHZSevVrVybzUKLEyC1Uzo');
+bot.login('NDcwNjI4MDU5ODUxMTI4ODQy.DjZFQA.23wXZsg1cvjwjS3aL4tdUSX_3ho');
 
 bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
 
