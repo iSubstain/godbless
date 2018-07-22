@@ -27,7 +27,7 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
         db.get("xp").push({user: msgauthor, xp: 1}).write();
     }else{
     
-        // CMD Admin
+    // CMD Admin
 
     }
 
