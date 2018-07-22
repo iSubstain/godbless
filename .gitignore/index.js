@@ -15,7 +15,7 @@ bot.on('ready', () => {
     console.log("» Bot Activé !");
 })
 
-bot.login('(process.env.TOKEN');
+bot.login('process.env.TOKEN');
 
 bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
 
