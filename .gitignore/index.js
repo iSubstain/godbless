@@ -224,6 +224,26 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
             message.channel.sendMessage("Test lmfao :tada: ");
         } else {
           message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
+                }
+        if (message.content === + "Azurii userinfo"){
+            let SSRole = message.guild.roles.find("name", "Rythm");
+            if(message.member.roles.has(SSRole.id)) {
+            var reload_embed = new Discord.RichEmbed()
+                .setColor('#4e31ba')
+                .addField("Site GodBless [ALPHA]", "**›**  Guilde du serveur **☬ GodBless Family ✨** \n :arrow_right_hook: **https://www.guilded.gg/teams/WR0p8ZRY**")
+            .setFooter("GodBless Shield        © 2018", "https://media.discordapp.net/attachments/332911890453889035/383731054483210244/fb_logo.png?width=496&height=496")
+            .setThumbnail("https://media.discordapp.net/attachments/383036516328538125/412274903421812757/discordpic3.0.jpg?width=908&height=511")
+            //.setThumbnail("https://media.discordapp.net/attachments/332911890453889035/383685176330551297/venezuela_flag_bandera_by_paundpro-d5qb8k4.jpg?width=767&height=496")
+            message.channel.sendEmbed(reload_embed);
+            console.log("» Commande Teams Activé");
+            } else {
+            message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
+                }
+
+        }
+    }
+});
+
         }
     }
 });
