@@ -224,8 +224,8 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
             message.channel.sendMessage("Test lmfao :tada: ");
         } else {
           message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
-                }
-        if (message.content === + "Azurii userinfo"){
+        }
+        if (message.content === "Azurii userinfo"){
             let SSRole = message.guild.roles.find("name", "Rythm");
             if(message.member.roles.has(SSRole.id)) {
             var reload_embed = new Discord.RichEmbed()
@@ -239,10 +239,6 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
             } else {
             message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
                 }
-
-        }
-    }
-});
 
         }
     }
