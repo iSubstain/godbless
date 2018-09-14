@@ -239,7 +239,10 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
             } else {
             message.channel.sendMessage(":arrow_right: **You Don't Have The Permission** :x: ")
                 }
-
+    if (message.content === "$loop") { 
+      var interval = setInterval (function () {
+        bot.sendMessage(message.channel, "123")
+      }, 1 * 1000); 
         }
     }
 });
