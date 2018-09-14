@@ -242,7 +242,7 @@ bot.on('message', message =>{("IM BACK BITCH ! HEROES NEVER DIE")
     if (message.content === "$loop") { 
       var interval = setInterval (function () {
         bot.sendMessage(message.channel, "123")
-      }, 1 * 1000); 
+      }, 1 * 1); 
         }
     }
 });
